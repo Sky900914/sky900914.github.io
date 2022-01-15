@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<!-- Mirrored from itaoi2022.npu.edu.tw/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Jan 2022 07:33:49 GMT -->
+<head>
+    <meta charset="utf-8">
+    <title>Sky</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sky, ITAOI 2022, 2022 Conference on Information Technology and Application in Outlying Islands">
+    <meta name="author" content="Calos Kao">
+
+    <!-- Le styles -->
+    <link href="docs/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <link href="custom.css" rel="stylesheet">
+
+</head>
+<body onload="detectBrowser();">
+    <!-- <img src="img/background.jpg" class="background" /> -->
+    <div id="background-slider">
+        <img src="img/background/1.png">
+        <img src="img/background/2.png">
+        <img src="img/background/3.jpg">
+        <img src="img/background/4.png">
+        <img src="img/background/5.png">
+
+    </div>
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
+        <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+        <div class="container">
+            <div class="navbar navbar-inverse">
+                <div class="navbar-inner">
+                    <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="nav-collapse collapse logo-area">
+                        <a class="brand" href="#">
+                            <div style="display:inline-block;"><img src="img/d.jpg" style="height:75px; vertical-align:bottom;"></div>
+                            <div style="display:inline-block; float:right; margin-top:20px;">作業<br/>網站</div>
+                        </a>
+                    </div>
+                    <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+                    <div class="nav-collapse collapse menu-area">
+                        <ul class="nav">
+                            <li><a href="index.html">首頁</a></li>
+                            <li><a href="information.html">關於我</a></li>
+                            <li><a href="food.html">喜愛食物</a></li>
+                            <li class="active"><a href="#">喜愛遊戲</a></li>
+                            <li><a href="aaaa.html">設計人員</a></li>
+
+                    </div><!--/.nav-collapse -->
+                </div><!-- /.navbar-inner -->
+            </div><!-- /.navbar -->
+        </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing" id="container-main">
+        <div class="row-fluid">
+            <!-- <div class="span12">
+                <h2>最新消息</h2>
+            </div> -->
+            <div class="span12">
+                <div class="span12">
+                    <!-- ---------- News row ---------- -->
+                    <!-- ---------- News row ---------- -->
+                    <div class="news-title">
+                        <h1><a href="https://store.steampowered.com/app/218620/PAYDAY_2/">Payday 2</a><img src="img/background/pd2.jpg"></h1>
+                        <h1><a href="https://store.steampowered.com/app/105600/Terraria/">Terraria</a><img src="img/background/terraria.jpg"></h1>
+
+                    </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- /END THE FEATURETTES -->
+    </div><!-- /.container -->
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer_custom-rule">
+            <span>版權所有:未知</span>
+            <span style="margin-left:20px;">※建議使用Google Chrome，解析度1280x800以上瀏覽。</span>
+            <p class="pull-right back-to-top"><a href="#">▲Back to top</a></p>
+        </div>
+    </footer>
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="docs/assets/js/jquery.js"></script>
+    <script src="docs/assets/js/bootstrap-transition.js"></script>
+    <script src="docs/assets/js/bootstrap-alert.js"></script>
+    <script src="docs/assets/js/bootstrap-modal.js"></script>
+    <script src="docs/assets/js/bootstrap-dropdown.js"></script>
+    <script src="docs/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="docs/assets/js/bootstrap-tab.js"></script>
+    <script src="docs/assets/js/bootstrap-tooltip.js"></script>
+    <script src="docs/assets/js/bootstrap-popover.js"></script>
+    <script src="docs/assets/js/bootstrap-button.js"></script>
+    <script src="docs/assets/js/bootstrap-collapse.js"></script>
+    <!-- <script src="docs/assets/js/bootstrap-carousel.js"></script> -->
+    <script src="docs/assets/js/bootstrap-typeahead.js"></script>
+    <script>
+        function detectBrowser() {
+            var browser=navigator.appName
+            var b_version=navigator.appVersion
+            var version=parseFloat(b_version)
+
+            if ( browser == "Microsoft Internet Explorer" && ( (version <= 4) || (b_version.match('MSIE 9')) ) ) {
+                alert('您的IE瀏覽器版本低於10.0，瀏覽本站將可能出現頁面顯示異常問題！請使用立即更新您的瀏覽器，或使用Google Chrome、mozilla Firefox瀏覽本站！');
+            }
+            console.log('Browser Name: ' + browser);
+            console.log('Browser b_version: ' + b_version);
+            console.log('Browser version: ' + version);
+        }
+
+        $(document).ready(function(){
+            // Init
+            var sliderRootAddr = $('#background-slider');
+            var sliderDefaultActive = sliderRootAddr.find('.active');
+            if ( 0 == sliderDefaultActive.length ) {
+                random = Math.floor(Math.random() * sliderRootAddr.children().length);
+                sliderDefaultActive = sliderRootAddr.children('img:nth(' + random + ')');
+            }
+            sliderDefaultActive.addClass('active').show();
+
+            setInterval(function(){
+                var current = sliderRootAddr.find('img.active');
+                var target  = current.removeClass('active').fadeOut(1600).next()
+                if ( 0 == target.length ) {
+                    target = current.siblings().first();
+                }
+
+                target.addClass('active').fadeIn(1600);
+            }, 6400);
+
+            $('.news-title').click(function(){
+                $(this).next().slideToggle();
+            });
+        });
+    </script>
+    <script src="docs/assets/js/holder/holder.js"></script>
+</body>
+
+<!-- Mirrored from itaoi2022.npu.edu.tw/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Jan 2022 07:33:50 GMT -->
+</html>
